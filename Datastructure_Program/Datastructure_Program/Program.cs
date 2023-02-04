@@ -6,13 +6,14 @@ namespace Datastructure_Program
     {
         public static string wordFilePath = @"C:\BridgeLabz\DataStructure-Program\Datastructure_Program\Datastructure_Program\Files\WordSearch.txt";
         public static string numberFilePath = @"C:\BridgeLabz\DataStructure-Program\Datastructure_Program\Datastructure_Program\Files\NumberFile.txt";
+        public static string paranthesisFilePath = @"C:\BridgeLabz\DataStructure-Program\Datastructure_Program\Datastructure_Program\Files\BalancedParanthesis.txt";
         static void Main(string[] args)
         {
             Console.WriteLine("Wellcome to the Data Structure Programs");
             bool flag = true;
             while(flag)
             {
-                Console.WriteLine(" 1.UnOrdered List \n 2.Ordered List \n 3.Exit");
+                Console.WriteLine(" 1.UnOrdered List \n 2.Ordered List \n 3.Balanced Paranthesis \n 4.Exit");
                 Console.Write("Select any one from the above option :");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
@@ -26,6 +27,10 @@ namespace Datastructure_Program
                         orderedList.ReadAllTextFile(numberFilePath);
                         break;
                     case 3:
+                        BalancedParanthesis balancedParanthesis = new BalancedParanthesis();
+                        balancedParanthesis.ReadText(paranthesisFilePath);
+                        break;
+                    case 4:
                         flag = false;
                         break;
                 }
