@@ -8,13 +8,14 @@ namespace Datastructure_Program
         public static string numberFilePath = @"C:\BridgeLabz\DataStructure-Program\Datastructure_Program\Datastructure_Program\Files\NumberFile.txt";
         public static string paranthesisFilePath = @"C:\BridgeLabz\DataStructure-Program\Datastructure_Program\Datastructure_Program\Files\BalancedParanthesis.txt";
         public static string personsListFilePath = @"C:\BridgeLabz\DataStructure-Program\Datastructure_Program\Datastructure_Program\Files\PersonsAtCounter.txt";
+        public static string palindromeFilePath = @"C:\BridgeLabz\DataStructure-Program\Datastructure_Program\Datastructure_Program\Files\Palindrome.txt";
         static void Main(string[] args)
         {
             Console.WriteLine("Wellcome to the Data Structure Programs");
             bool flag = true;
             while(flag)
             {
-                Console.WriteLine(" 1.UnOrdered List \n 2.Ordered List \n 3.Balanced Paranthesis \n 4.Banking Cash Counter \n 5.Exit");
+                Console.WriteLine(" 1.UnOrdered List \n 2.Ordered List \n 3.Balanced Paranthesis \n 4.Banking Cash Counter \n 5.PalindromeCheckForString \n 6.Exit");
                 Console.Write("Select any one from the above option :");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
@@ -36,6 +37,10 @@ namespace Datastructure_Program
                         bankingCashCounter.ReadAllTextFile(personsListFilePath);
                         break;
                     case 5:
+                        PalindromeChecker palindromeChecker = new PalindromeChecker();
+                        palindromeChecker.ReadAllTextFile(palindromeFilePath);
+                        break;
+                    case 6:
                         flag = false;
                         break;
                 }
